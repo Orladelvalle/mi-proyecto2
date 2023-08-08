@@ -1,0 +1,365 @@
+*{ box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-image: url(https://thecardinal.skagit.edu/wp-content/uploads/2021/03/Colorful-Brain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #0f0f0f;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+body.modo-oscuro{
+    background-image: url(https://us.123rf.com/450wm/gelpi/gelpi2303/gelpi230303425/200748865-cerebro-con-explosi%C3%B3n-de-polvo-de-colores-sobre-un-fondo-oscuro-concepto-de-salud-mental.jpg?ver=6);
+    color: #fdf6f6;
+}
+#menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(https://img.freepik.com/vector-premium/fondo-abstracto-pintura-color-calido-acuarela-sobre-papel_108834-174.jpg?w=996);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    box-shadow: 0px 2px 4px #dcc4d7;
+}
+body.modo-oscuro #menu{
+    background-image: url(https://img.freepik.com/foto-gratis/viejo-fondo-negro-textura-grunge-papel-tapiz-oscuro-pizarra-pizarra-pared-habitacion_1258-28312.jpg?q=10&h=200);
+}
+#menu-btn{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 85px;
+    height: 85px;
+    font-size: 50px;
+    color: #da647d;
+}
+body.modo-oscuro #menu-btn{
+    color: #631150;
+}
+i#close-menu{
+    display: none;
+}
+nav{
+    display: none;
+    float: right;
+}
+body.mobile_menu_active{
+    overflow: hidden;
+}
+body.mobile_menu_active i#close-menu{
+    display: block;
+}
+body.mobile_menu_active i#open-menu{
+    display: none;
+}
+body.mobile_menu_active header{
+    height: 51vh;
+    flex-wrap:wrap;
+    align-items: flex-start;
+    transition: height 0.3s;
+    font-size: 40px;
+}
+body.mobile_menu_active nav{
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+body.mobile_menu_active ul#lista{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+header{
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    padding: 16px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+header img{
+    margin-right: 50px;
+    margin-left: auto;
+    border-radius: 100%;
+    object-fit: cover;
+    padding: 5px;
+}
+header ul{
+    display: flex;
+    margin-left: auto;
+}
+header ul li{
+    font-size: 25px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    padding: 15px;
+    margin-left: 40px;
+    box-shadow: 0px 2px 4px #da647d;
+    border-radius: 10px;
+}
+header ul li:hover{
+    background-color: #da647d;
+}
+body.modo-oscuro header ul li:hover{
+    background-color: #cd983e;
+}
+body.modo-oscuro header ul li{
+    box-shadow: 0px 2px 4px #cd983e;
+}
+#modo-oscuro-btn{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 50px;
+    width: 85px;
+    height: 85px;
+}
+body.modo-oscuro #modo-oscuro{
+    display: none;
+}
+body:not(.modo-oscuro) #modo-claro{
+    display: none;
+}
+#logo-oscuro{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 50px;
+    width: 85px;
+    height: 85px;
+}
+body.modo-oscuro #logo-claro{
+    display: none;
+}
+body:not(.modo-oscuro) #logo-osc{
+    display: none;
+}
+hr{
+    border: none;
+    height: 4px;
+    margin-bottom: 100px;
+}
+.foto-circulo{
+    display: flex;
+    justify-content: center;
+}
+.mi-foto{
+    width: 400px;
+    height: 400px; 
+    border-radius: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+body.modo-oscuro .mi-foto{
+    border-radius: 30%;
+}
+.orla{
+    justify-content: auto;
+    background-color: #f0c8e7;
+    border: none;
+    color: #2b2929;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+body.modo-oscuro .orla{
+    background-color: #631150;
+    color: #fdf6f6;
+}
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+p{
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+}
+h2{
+    font-size: 28px;
+}
+.contenedor-boton{
+    text-align: center;
+}
+.mi-boton{
+    display: inline-block;
+    background-color: #da647d;
+    color: #0f0f0f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 35px;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+body.modo-oscuro .mi-boton{
+    background-color: #cd983e;
+    color: #100f0f;
+    border-radius: 10px;
+}
+.formac{
+    background-color: #f0c8e7;
+    border: none;
+    color: #2b2929;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+body.modo-oscuro .formac{
+    background-color: #631150;
+    color: #fdf6f6;
+}
+#Formacion ul li{
+    font-size: 18px;
+}
+.hablemos{
+    background-color: #f0c8e7;
+    border: none;
+    color: #2b2929;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+body.modo-oscuro .hablemos{
+    background-color: #631150;
+    color: #fdf6f6;
+}
+#Contacto ul{
+    display: flex;    
+}
+#Contacto ul li{
+    margin-bottom: 20px;
+    color: #da647d;
+    font-size: 80px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    padding: 16px;
+    width: 10%;
+    align-items: center
+}
+body.modo-oscuro #Contacto ul li{
+    color: #cd983e;
+}
+.icono1:hover{
+    display: flex;
+    position: relative;
+    transition: transform 0.2s;
+    transform: scale(1.09);
+    cursor: pointer;
+}
+.icono2:hover{
+    display: flex;
+    position: relative;
+    transition: transform 0.2s;
+    transform: scale(1.09);
+    cursor: pointer;
+}
+.icono3:hover{
+    display: flex;
+    position: relative;
+    transition: transform 0.2s;
+    transform: scale(1.09);
+    cursor: pointer;
+}
+.pie{
+    background-color: #eae0ac;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f0f0f;
+    text-align: center;
+    font-size: 15px;
+    background-image: url(https://img.freepik.com/vector-premium/fondo-abstracto-pintura-color-calido-acuarela-sobre-papel_108834-174.jpg?w=996);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+body.modo-oscuro .pie{
+    color: #fdf6f6;
+    background-image: url(https://img.freepik.com/foto-gratis/viejo-fondo-negro-textura-grunge-papel-tapiz-oscuro-pizarra-pizarra-pared-habitacion_1258-28312.jpg?q=10&h=200);
+}
+@media (min-width:1024px){
+#Inicio{
+    display: flex;    
+}  
+.orla{
+    padding: 50px;
+}
+.menu-item{
+    margin-right: 70px;  
+}
+h1{
+    text-align: left;
+}
+.presentacion{
+    text-align: left;
+}
+body.modo-oscuro .orla{
+    padding: 50px;
+}
+ul li{
+    font-size: 120px;
+    margin-bottom: 70px;
+}
+#menu-btn{
+    display: none;
+}
+#modo-oscuro-btn{
+    width: 200px;
+}
+nav{
+    display: block;
+}
+}
+
+
+
+
+
+
+
+
+
